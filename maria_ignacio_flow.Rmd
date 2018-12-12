@@ -59,6 +59,8 @@ num_days_zero <- sum(daily_flow_summary$mean_daily_flow == "0") %>% print()
 
 num_days_total <- n_distinct(daily_flow_summary$Day) %>% print()
 
+num_years <- n_distinct(daily_flow_summary$Year) %>% print()
+
 
 ```
 
