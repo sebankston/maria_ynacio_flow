@@ -47,7 +47,16 @@ histogram of mean daily flow
 daily_flow_summary %>% ggplot(aes(x = mean_daily_flow)) + geom_histogram() + theme_bw()
 ```
 
+Percent of days where mean flow is 0 cfs and number of days where mean flow was 0 cfs
 
+```{r}
+percent_days_zero <- mean(daily_flow_summary$mean_daily_flow == "0") %>% print()
+
+num_days_zero <- sum(daily_flow_summary$mean_daily_flow == "0") %>% print()
+
+num_days_total <- n_distinct(daily_flow_summary$Day) %>% print()
+
+```
 
 
 
