@@ -3,8 +3,9 @@ title: "stream_flow_analysis"
 author: "Sam Bankston"
 date: "December 11, 2018"
 output:
-  html_document: default
+  word_document: default
   pdf_document: default
+  html_document: default
 ---
 
 Load packages
@@ -44,7 +45,7 @@ top_20
 histogram of mean daily flow
 
 ```{r message=FALSE, warning=FALSE}
-daily_flow_summary %>% ggplot(aes(x = mean_daily_flow)) + geom_histogram() + theme_bw()
+daily_flow_summary %>% ggplot(aes(x = mean_daily_flow)) + geom_histogram(binwidth = 10) + theme_bw()
 ```
 
 Flow summary statistics
